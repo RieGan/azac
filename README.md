@@ -24,7 +24,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
     - HTTPS: `git clone https://github.com/RieGan/azac.git`
     - SSH: `git clone git@github.com:RieGan/azac.git`
 2. Go into the project directory \
-    `cd meateria-fe`
+    `cd azac`
 3. Install Dependencies\
     `npm install`
 4. Create or edit components
