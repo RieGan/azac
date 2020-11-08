@@ -1,8 +1,6 @@
-# Meateria FrontEnd
+# AZAC
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-[Back-end source code](https://github.com/anggerdeni/meateria-be.git)
 
 ## How to Run
 ### `npm start`
