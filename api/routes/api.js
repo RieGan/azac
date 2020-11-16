@@ -14,6 +14,8 @@ var list_zone = [];
 var list_hospital = [];
 var list_rekomendation = [];
 var last_update = new Date();
+var national = {}
+var list_province = [];
 
 fs.createReadStream(path.join(__dirname, '../variables/kecamatan.csv'))  .pipe(csv_parser())
     .on('data', (data) => list_kecamatan.push(data))
@@ -39,9 +41,31 @@ fs.readFile(path.join(__dirname, '../variables/recomendation.json'), (err, data)
     console.log("recomendation imported");
 });
 
+fs.readFile(path.join(__dirname, '../variables/national.json'), (err, data) => {
+    if (err) throw err;
+    national = JSON.parse(data);
+    national = { penambahan: national.update.penambahan, total: national.update.total}
+    console.log("national data imported");
+});
+
+fs.readFile(path.join(__dirname, '../variables/province.json'), (err, data) => {
+    if (err) throw err;
+    list_province = JSON.parse(data).list_data;
+    console.log("province data imported");
+});
+
 function getZone (lon, lat){
     return list_zone.sort((now, next) => (Math.abs(now.loc.lat - lat) + Math.abs(now.loc.lon - lon)) - (Math.abs(next.loc.lat-lat)+Math.abs(next.loc.lon-lon)))[0]
 }
+
+router.get('/national', function (req, res, next) {
+    res.send(national);
+})
+
+router.get('/province/:prov', function (req, res, next) {
+    var prov_name = req.params.prov.toUpperCase();
+    res.send(list_province.find(value => (value.key === prov_name)))
+})
 
 router.get('/kecamatan/:id', function(req, res, next) {
     var id = req.params.id;
