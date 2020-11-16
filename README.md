@@ -1,6 +1,6 @@
 # AZAC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Express Generator](https://expressjs.com/en/starter/generator.html).
 
 ## How to Run
 ### `npm start`
@@ -17,12 +17,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## How to Contribute
+## How to Contribute [Client/Front-End]
 1. Clone the project 
     - HTTPS: `git clone https://github.com/RieGan/azac.git`
     - SSH: `git clone git@github.com:RieGan/azac.git`
 2. Go into the project directory \
-    `cd azac`
+    `cd azac/client`
 3. Install Dependencies\
     `npm install`
 4. Create or edit components
@@ -31,6 +31,35 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
     - page: `src/layouts/`
     - routing: `src/index.js`
     - variables: `src/variables`
+5. Create new branch\
+    `git checkout -b <branch_name>`\
+    Look at this "[Git Branch Naming Convention](https://dev.to/couchcamote/git-branching-name-convention-cch)".
+6. Commit changes\
+`git commmit -a -m "<commit_message>"`\
+or
+    - add files: `git add <files>`
+    - commit: `git commit -m "<commit_message>"`\
+7. Push to remote repository\
+`git push origin <branch_name>`
+8. create pull request to master
+9. Wait for review
+10. Reviewed & merged to master
+11. Change branch to master and rebase\
+    `git checkout master`\
+    `git pull --rebase origin master`
+12. repeat from 3 if `package.json` changed, otherwise repeat from 4
+## How to Contribute [API/Back-End]
+1. Clone the project 
+    - HTTPS: `git clone https://github.com/RieGan/azac.git`
+    - SSH: `git clone git@github.com:RieGan/azac.git`
+2. Go into the project directory \
+    `cd azac/api`
+3. Install Dependencies\
+    `npm install`
+4. Create or edit module
+    - variables: `variables/*`
+    - routes(func): `routes/*`
+    - routes(main): `bin/www`
 5. Create new branch\
     `git checkout -b <branch_name>`\
     Look at this "[Git Branch Naming Convention](https://dev.to/couchcamote/git-branching-name-convention-cch)".
