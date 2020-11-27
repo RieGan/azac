@@ -1,6 +1,7 @@
 ## BackEnd API documentation
+password = `password123`
 - fetch nearest hospitals list : `http:get`
-`/api/hospitals/<province-name>`
+`/api/hospital/<province-name>`
 - fetch zone type and id kecamatan : `http:get`
                                      `/api/zone/lat=<geolocation_latitude>&lon=<geolocation_longitude>`
 - fetch kecamatan information : `http:get`
@@ -16,7 +17,8 @@
 - add recomendation : `http:post` `/variables/recomendation/add`
     + `password=<api-password>`
     + `zone=<zone_type>`
-    + `rec=<recomendation_message>`
+    + `title=<recomendation_title>`
+    + `caption=<recomendation_caption>`
 - remove recomendation : `http:post` `/variables/recomendation/remove`
     + `password=<api-password>`
     + `id=<id_recomendation>`   
