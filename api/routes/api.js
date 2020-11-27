@@ -54,8 +54,12 @@ fs.readFile(path.join(__dirname, '../variables/province.json'), (err, data) => {
     console.log("province data imported");
 });
 
-function getZone (lon, lat){
+function getZoneByLocation (lon, lat){
     return list_zone.sort((now, next) => (Math.abs(now.loc.lat - lat) + Math.abs(now.loc.lon - lon)) - (Math.abs(next.loc.lat-lat)+Math.abs(next.loc.lon-lon)))[0]
+}
+function getZoneByKecamatan (id_kecamatan){
+    console.log("kecamatan:", id_kecamatan)
+    return list_zone.find(value => (value.kode_kecamatan === id_kecamatan))
 }
 
 router.get('/national', function (req, res, next) {
@@ -76,7 +80,8 @@ router.get('/kecamatan/:id', function(req, res, next) {
 
 router.get('/zone/:location', function(req, res, next) {
     var location = querystring.parse(req.params.location);
-    res.send(getZone(location.lon, location.lat));
+    if(typeof location.kecamatan === "undefined") res.send(getZoneByLocation(location.lon, location.lat));
+    else res.send(getZoneByKecamatan(location.kecamatan))
 });
 
 router.get('/hospital/:prov', function (req, res, next) {
@@ -89,6 +94,17 @@ router.get('/recomendation/:zone', function (req, res, next) {
     var zone = req.params.zone;
     var recomendations = list_rekomendation.filter(value => (value.zone === zone))
     res.send(JSON.stringify(recomendations));
+})
+
+router.get('/search/:name', function (req, res, next) {
+    var name = req.params.name.toUpperCase();
+    // console.log(name);
+    // console.log("ini list kecamatan",list_kecamatan);
+    var kecamatan = list_kecamatan.filter(value => (value[1].toUpperCase().search(name)>=0 || value[2].toUpperCase().search(name)>=0 || value[3].toUpperCase().search(name)>=0))
+    kecamatan = kecamatan.slice(0,5);
+    res.send(kecamatan.map(value => (
+        {id: value[0], text: value[3] + ", " + value[2] +", " + value[1]}
+    )))
 })
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })

@@ -75,7 +75,7 @@ router.post('/recomendation/add', urlencodedParser, function (req, res, next) {
             var list_recomendations = JSON.parse(data);
             list_recomendations.forEach(value => {ids.push(parseInt(value.id))});
             console.log(ids);
-            list_recomendations.push({id:unusedId(ids), zone: req.body.zone, rec: req.body.rec});
+            list_recomendations.push({id:unusedId(ids), zone: req.body.zone, title: req.body.title, caption: req.body.caption});
             console.log(list_recomendations)
             fs.writeFileSync(path.join(__dirname, '../variables/recomendation.json'), JSON.stringify(list_recomendations));
             res.send({status:"success"})
