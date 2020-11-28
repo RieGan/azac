@@ -1,1 +1,7 @@
-[{"id":0,"zone":"2","rec":"coba masukin zone2 via api"},{"id":2,"zone":"2","rec":"coba masukin zone2 via api"},{"id":3,"zone":"2","rec":"coba masukin zone2 via api"},{"id":4,"zone":"2","rec":"coba masukin zone2 via api"}]
+[{ "id": 0, "zone": "0", "title": "zona aman 1", "caption": "Kamu bisa melakukan olahraga outdoor seperti bersepeda dengan tetap menerapkan protokol kesehatan" },
+    { "id": 1, "zone": "0", "title": "zona aman 2", "caption": "Kamu bisa melakukan olahraga outdoor seperti bersepeda dengan tetap menerapkan protokol kesehatan" },
+    { "id": 2, "zone": "1", "title": "zona rawan", "caption": "Kamu bisa olahraga di area sekitar rumah yang menghindari kontak fisik dan hanya dilakukan dengan orang terdekat" },
+    { "id": 3, "zone": "1", "title": "zona kuning", "caption": "Kamu bisa olahraga di area sekitar rumah yang menghindari kontak fisik dan hanya dilakukan dengan orang terdekat" },
+    { "id": 4, "zone": "2", "title": "zona berbahaya", "caption": "Cuci tangan lebih sering dan selalu menggunakan masker. Untuk menjaga work-life balance, sempatkan olahraga indoor, seperti at-home-workout" },
+    { "id": 5, "zone": "2", "title": "zona merah", "caption": "Cuci tangan lebih sering dan selalu menggunakan masker. Untuk menjaga work-life balance, sempatkan olahraga indoor, seperti at-home-workout" }
+]
