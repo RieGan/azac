@@ -25,7 +25,8 @@ const useStyles = makeStyles({
     fontSize: "12px",
     fontFamily: "Poppins",
     fontWeight: "700",
-    letterSpacing: "0.5px"
+    letterSpacing: "0.5px",
+    marginBottom: "20px"
   },
   contentAct: {
     fontSize: "12px",

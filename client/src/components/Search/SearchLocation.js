@@ -10,22 +10,25 @@ import Container from "@material-ui/core/Container";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import RoomIcon from "@material-ui/icons/Room";
 import SearchIcon from "@material-ui/icons/Search";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   form: {
-    backgroundColor: "#e2e2e2",
+    backgroundColor: "#FFFFFF",
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "white"
+        borderColor: "transparent"
       },
       "&:hover fieldset": {
-        borderColor: "white"
+        borderColor: "transparent"
       },
       "&.Mui-focused fieldset": {
-        borderColor: "white"
+        borderColor: "transparent"
       }
     },
-    borderRadius: "20px"
+    borderRadius: "15px",
+    marginTop: "30px",
+    width: "320px",
   }
 });
 export default function SearchLocation(props) {
@@ -63,7 +66,7 @@ export default function SearchLocation(props) {
   return (
     <Container maxWidth={"sm"}>
       <Grid container justify={"center"}>
-        <Grid item xs={10}>
+        <Grid item xs={100}>
           <TextField
             fullWidth
             variant={"outlined"}
