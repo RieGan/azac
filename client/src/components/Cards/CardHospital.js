@@ -23,11 +23,13 @@ const useStyles = makeStyles({
     padding: "5px",
     borderRadius: "10px",
     color: "#FFFFFF",
-    marginBottom: "24px"
+    marginBottom: "4px"
   },
   nameHospital: {
-    fontWeight: "700",
-    fontFamily: "Poppins"
+    fontWeight: "900",
+    fontFamily: "Poppins",
+    marginTop: "25px",
+    marginBottom: "20px"
   },
   addressHospital: {
     fontFamily: "Poppins",
@@ -41,7 +43,7 @@ const useStyles = makeStyles({
     textAlign: "center",
     borderRadius: "15px",
     padding: "15px",
-    width: "230px",
+    width: "100%",
     fontFamily: "Poppins",
     color: "#FFFFFF",
     textTransform: "initial"

@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     borderRadius: "20px",
     boxShadow: "0px 8px 4px rgba(17, 17, 17, 0.04)",
     paddingTop: "12px",
-    paddingBottom: "12px"
+    paddingBottom: "12px",
+    marginTop: "60px"
   },
   sekarang: {
     fontSize: "12px",
