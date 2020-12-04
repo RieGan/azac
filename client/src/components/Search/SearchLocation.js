@@ -66,7 +66,7 @@ export default function SearchLocation(props) {
   return (
     <Container maxWidth={"sm"}>
       <Grid container justify={"center"}>
-        <Grid item xs={100}>
+        <Grid item xs={12}>
           <TextField
             fullWidth
             variant={"outlined"}
